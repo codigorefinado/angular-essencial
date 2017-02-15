@@ -1,11 +1,12 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {GiphyComponent} from "./giphy.component";
+import { NgModule } from '@angular/core';
+import { GiphyComponent } from './giphy.component';
+import { GiphyRoutingModule } from './giphy-routing.module';
+import { SharedModuleModule } from '../shared/shared.module';
 
 @NgModule({
-  imports: [CommonModule],
-  declarations: [GiphyComponent],
-  exports: [GiphyComponent],
+  imports: [ SharedModuleModule, GiphyRoutingModule ],
+  declarations: [ GiphyComponent ],
+  exports: [ GiphyComponent ],
   providers: []
 
 })
