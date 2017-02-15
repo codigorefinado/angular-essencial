@@ -1,9 +1,11 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
+import {GiphyComponent} from "./giphy.component";
 
 @NgModule({
   imports: [CommonModule],
-  declarations: [],
+  declarations: [GiphyComponent],
+  exports: [GiphyComponent],
   providers: []
 
 })
