@@ -1,3 +1,11 @@
-/**
- * Created by netst on 15/02/2017.
- */
+import {NgModule} from '@angular/core';
+import {RouterModule} from '@angular/router';
+
+@NgModule({
+  imports: [
+    RouterModule.forRoot([])
+  ],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {
+}
