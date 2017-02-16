@@ -2,13 +2,35 @@
     <label>
         <span>Seu nome completo</span>
         <input id="nome" type="text" name="nomeCompleto" placeholder="seu nome"
-               ngModel minlength="2" required>
+               #nomeCompleto="ngModel" ngModel minlength="2" required>
     </label>
 
+    <div *ngIf="nomeCompleto.errors?.required && nomeCompleto.touched" class="error">
+        O nome é obrigatório
+    </div>
 
     <label ngModelGroup="contato" #contatoUsuario="ngModelGroup">
         <span>Email </span>
-        <input type="text" placeholder="Seu e-mail aqui..." name="email" ngModel required>
+        <input type="email" placeholder="Seu e-mail aqui..." name="email" ngModel required>
     </label>
-    <button type="submit" [disabled]="f.invalid">Sign up</button>
+
+    <button type="submit" [disabled]="f.invalid">Enviar</button>
 </form>
+
+<!--
+ngForm -> '#f'
+    ngModel -> 'nomeCompleto'
+    ngModelGroup -> 'contato'
+        -> ngModel -> 'email'
+-->
+
+
+<P>
+    {{nomeCompleto.errors | json }}
+</P>
+
+<P>
+    {{ f.controls.nomeCompleto?.errors | json }}
+</P>
+
+
