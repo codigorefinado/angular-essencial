@@ -20,7 +20,9 @@ export class ContatoComponent implements OnInit {
 
     this.contatoComponentService.enviarContato(contatoForm.value).subscribe((response) => {
       console.log('Response', response);
+      console.log('fim!');
     });
+
 
   }
 
