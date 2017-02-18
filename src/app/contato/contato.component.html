@@ -14,6 +14,12 @@
         <input type="email" placeholder="Seu e-mail aqui..." name="email" ngModel required>
     </label>
 
+    <label ngModelGroup="contato" #contatoUsuario="ngModelGroup">
+        <span>Mensagem: </span>
+        <input type="text" placeholder="Sua mensagem" name="mensagem" ngModel required>
+    </label>
+
+
     <button type="submit" [disabled]="f.invalid">Enviar</button>
 </form>
 

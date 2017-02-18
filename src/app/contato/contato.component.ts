@@ -17,9 +17,11 @@ export class ContatoComponent implements OnInit {
 
   enviarContato(contatoForm: NgForm) {
     console.log('contatoForm:', contatoForm.value);
-    this.contatoComponentService.get().subscribe((response) => {
+
+    this.contatoComponentService.enviarContato(contatoForm.value).subscribe((response) => {
       console.log('Response', response);
     });
+
   }
 
 }
