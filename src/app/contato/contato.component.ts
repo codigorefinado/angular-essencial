@@ -13,6 +13,7 @@ export class ContatoComponent implements OnInit {
   }
 
   ngOnInit() {
+
   }
 
   enviarContato(contatoForm: NgForm) {

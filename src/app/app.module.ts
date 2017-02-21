@@ -6,20 +6,25 @@ import { SharedModuleModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { GiphyModule } from './giphy/giphy.module';
 import { ContatoModule } from './contato/contato.module';
+import { PageNotFoundModule } from './pagenotfound/pagenotfound.modules';
+import { InicioModule } from './inicio/inicio.module';
 
 @NgModule({
-    declarations: [
-        AppComponent
-    ],
-    imports: [
-        BrowserModule,
-        GiphyModule,
-        ContatoModule,
-        SharedModuleModule,
-        AppRoutingModule
-    ],
-    providers: [ GiphyService ],
-    bootstrap: [ AppComponent ]
+  declarations: [
+    AppComponent,
+  ],
+  imports: [
+    BrowserModule,
+    InicioModule,
+    GiphyModule,
+    ContatoModule,
+    SharedModuleModule,
+    AppRoutingModule,
+
+    PageNotFoundModule
+  ],
+  providers: [ GiphyService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule {
 }
