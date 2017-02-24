@@ -1,0 +1,29 @@
+<p>
+    cliente works!
+</p>
+
+
+<table>
+    <tr>
+        <td>Nome</td>
+        <td>Abrir</td>
+    </tr>
+
+    <tr>
+        <td>Clayton</td>
+        <td>
+            <button (click)="abrirDetalheCliente(1)">Abrir</button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Passos</td>
+        <td>
+            <button (click)="abrirDetalheCliente(2)">Abrir</button>
+        </td>
+    </tr>
+
+
+</table>
+
+<a [routerLink]="['/clientes-detalhe', 1]"> Clayton </a>
